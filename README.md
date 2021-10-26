@@ -35,7 +35,12 @@ git clone https://github.com/flexmonster/pivot-vue.git && cd pivot-vue
     - To see how the **Vue 3** application works, run the following command:
 
     ```bash
-    cd vue3
+    cd vue3/ES6
+    ```
+    or 
+    
+    ```bash
+    cd vue3/typescript
     ```
 
 3. Install the npm packages described in `package.json`:
