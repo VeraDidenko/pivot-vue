@@ -4,6 +4,9 @@
       <li class="tab-button">
         <router-link to="/pivot-table-demo">PIVOT TABLE DEMO</router-link>
       </li>
+      <li class="tab-button">
+        <router-link to="/composition-api-demo">PIVOT TABLE DEMO (Composition API)</router-link>
+      </li>
     </ol>
     <div class="sub-title">API and Events</div>
     <ol>
