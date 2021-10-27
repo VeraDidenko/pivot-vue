@@ -103,7 +103,7 @@ export default defineComponent({
     removeCustomization(): void {
       (
         (this.$refs.pivot as typeof Pivot).flexmonster as Flexmonster.Pivot
-      ).customizeCell(null!);
+      ).customizeCell(() => null);
     },
     applyCustomization(): void {
       (

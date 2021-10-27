@@ -8,6 +8,11 @@ const routes: Array<RouteRecordRaw> = [
     component: PivotTableDemo
   },
   {
+    path: '/composition-api-demo',
+    name: 'CompositionAPIDemo',
+    component: () => import('@/views/VueFlexmonsterExamples/CompositionAPIDemo.vue')
+  },
+  {
     path: '/calling-events',
     name: 'CallingEvents',
     component: () => import('@/views/VueFlexmonsterExamples/CallingEvents.vue')
