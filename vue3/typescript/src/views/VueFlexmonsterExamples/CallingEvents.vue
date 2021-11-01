@@ -147,7 +147,9 @@ export default defineComponent({
         event: log,
       });
       requestAnimationFrame(() => {
-        (this.$refs.logsContainer as HTMLDivElement).scrollTop = (this.$refs.logsContainer as HTMLDivElement).scrollHeight;
+        if (this.$refs.logsContainer) {
+          (this.$refs.logsContainer as HTMLDivElement).scrollTop = (this.$refs.logsContainer as HTMLDivElement).scrollHeight;
+        }
       });
     },
     signOffAllEvents: function () {

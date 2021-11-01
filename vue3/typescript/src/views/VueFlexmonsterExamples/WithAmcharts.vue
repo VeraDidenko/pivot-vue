@@ -73,7 +73,7 @@ export default defineComponent({
         this.updateChart.bind(this)
       );
     },
-    createChart(chartData: Flexmonster.GetDataValueObject, rawData: any): void {
+    createChart(chartData: Flexmonster.GetDataValueObject, rawData: Flexmonster.GetDataValueObject): void {
       /* Apply amCharts theme */
       am4core.useTheme(am4themes_animated);
 
@@ -105,7 +105,7 @@ export default defineComponent({
 
       this.chart = chart;
     },
-    updateChart(chartData: Flexmonster.GetDataValueObject, rawData: any): void {
+    updateChart(chartData: Flexmonster.GetDataValueObject, rawData: Flexmonster.GetDataValueObject): void {
       this.chart?.dispose();
       this.createChart(chartData, rawData);
     },
