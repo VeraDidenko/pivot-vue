@@ -68,11 +68,11 @@
 
 <script>
 import ToggleButton from "@/components/UIElements/ToggleButton";
-import Pivot from "@/components/Pivot.vue";
+import { defineComponent } from 'vue';
 
-export default {
+export default /*#__PURE__*/defineComponent({
   name: "CallingEvents",
-  components: { ToggleButton, Pivot },
+  components: { ToggleButton },
   data: function () {
     return {
       logs: [],
@@ -160,5 +160,5 @@ export default {
       this.logs = [];
     },
   },
-};
+});
 </script>

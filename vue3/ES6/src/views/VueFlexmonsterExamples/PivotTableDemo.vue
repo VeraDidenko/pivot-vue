@@ -14,18 +14,24 @@
 </template>
 
 <script>
-import Pivot from "@/components/Pivot.vue";
+//Using the vue-flexmonster module (local registration):
+//1. Importing the vue-flexmonster module:
+//Uncomment the lines below:
+// import Pivot from "vue-flexmonster/vue3";
 // import 'flexmonster/flexmonster.css';
+import { defineComponent } from 'vue';
 
-export default {
+export default /*#__PURE__*/defineComponent({
   name: "PivotTableDemo",
   methods: {
     customizeToolbar: function(toolbar) {
       toolbar.showShareReportTab = true;
     }
   },
-  components: {
-     Pivot
-  }
-};
+  //2. Defining the component:
+  //Uncomment the lines below:
+  // components: {
+  //    Pivot
+  // }
+});
 </script>

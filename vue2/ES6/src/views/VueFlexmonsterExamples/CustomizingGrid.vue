@@ -34,9 +34,8 @@
 
 <script>
 import ToggleButton from "@/components/UIElements/ToggleButton";
-import { defineComponent } from 'vue';
 
-export default /*#__PURE__*/defineComponent({
+export default {
   name: "CustomizingGrid",
   components: { ToggleButton },
   methods: {
@@ -106,5 +105,5 @@ export default /*#__PURE__*/defineComponent({
       }
     },
   },
-});
+};
 </script>

@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import Pivot from "@/components/Pivot.vue";
 import { defineComponent, ref } from 'vue';
 
 export default defineComponent({
@@ -38,9 +37,6 @@ export default defineComponent({
       customizeToolbar,
       reportCompleteHandler
     }
-  },
-  components: {
-     Pivot
   }
 });
 </script>

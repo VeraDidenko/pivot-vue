@@ -38,9 +38,9 @@ am4core.useTheme(am4themes_animated);
 
 //Importing Flexmonster's connector for Amcharts:
 import "flexmonster/lib/flexmonster.amcharts";
-import Pivot from "@/components/Pivot.vue";
+import { defineComponent } from 'vue';
 
-export default {
+export default /*#__PURE__*/defineComponent({
   name: "WithAmcharts",
   methods: {
     customizeToolbar: function (toolbar) {
@@ -100,9 +100,6 @@ export default {
     if (this.chart) {
       this.chart.dispose();
     }
-  },
-  components: {
-    Pivot
   }
-};
+});
 </script>

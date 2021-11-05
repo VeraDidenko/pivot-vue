@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import PivotTableDemo from '../components/VueFlexmonsterExamples/PivotTableDemo'
+import PivotTableDemo from '@/views/VueFlexmonsterExamples/PivotTableDemo'
 
 Vue.use(VueRouter)
 
@@ -12,41 +12,41 @@ const routes = [{
   {
     path: '/calling-events',
     name: 'CallingEvents',
-    component: () => import('../components/VueFlexmonsterExamples/CallingEvents')
+    component: () => import('@/views/VueFlexmonsterExamples/CallingEvents')
   },
   {
     path: '/using-api-calls',
     name: 'UsingAPICalls',
-    component: () => import('../components/VueFlexmonsterExamples/UsingAPICalls')
+    component: () => import('@/views/VueFlexmonsterExamples/UsingAPICalls')
   },
   {
     path: '/updating-data',
     name: 'UpdatingData',
-    component: () => import('../components/VueFlexmonsterExamples/UpdatingData')
+    component: () => import('@/views/VueFlexmonsterExamples/UpdatingData')
   },
   {
     path: '/customizing-toolbar',
     name: 'CustomizingToolbar',
-    component: () => import('../components/VueFlexmonsterExamples/CustomizingToolbar')
+    component: () => import('@/views/VueFlexmonsterExamples/CustomizingToolbar')
   },
   {
     path: '/customizing-grid',
     name: 'CustomizingGrid',
-    component: () => import('../components/VueFlexmonsterExamples/CustomizingGrid')
+    component: () => import('@/views/VueFlexmonsterExamples/CustomizingGrid')
   },
   {
     path: '/with-highcharts',
     name: 'WithHighcharts',
-    component: () => import('../components/VueFlexmonsterExamples/WithHighcharts')
+    component: () => import('@/views/VueFlexmonsterExamples/WithHighcharts')
   },
   {
     path: '/with-amcharts',
     name: 'WithAmcharts',
-    component: () => import('../components/VueFlexmonsterExamples/WithAmcharts')
+    component: () => import('@/views/VueFlexmonsterExamples/WithAmcharts')
   },
   {
     path: '*',
-    name: 'PivotTableDemo',
+    name: 'Home',
     redirect: '/pivot-table-demo'
   }
 ]

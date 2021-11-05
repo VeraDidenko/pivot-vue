@@ -31,11 +31,11 @@
 import Highcharts from "highcharts";
 //Importing Flexmonster's connector for Highcharts:
 import "flexmonster/lib/flexmonster.highcharts";
-import Pivot from "vue-flexmonster/vue3";
-import * as Flexmonster from "flexmonster/types/flexmonster";
-import { defineComponent } from 'vue';
+import {Pivot} from "vue-flexmonster";
+import Flexmonster from "flexmonster/types/flexmonster";
+import Vue from 'vue';
 
-export default defineComponent({
+export default Vue.extend({
   name: "WithHighcharts",
   methods: {
     customizeToolbar(toolbar : Flexmonster.Toolbar) : void {
@@ -60,8 +60,8 @@ export default defineComponent({
       this.drawChart();
     },
   },
-  components: {
-    Pivot
-  }
+  // components: {
+  //   Pivot
+  // }
 });
 </script>

@@ -16,11 +16,13 @@
 <script lang="ts">
 //Using the vue-flexmonster module (local registration):
 //1. Importing the vue-flexmonster module:
-import Pivot from "vue-flexmonster/vue3";
-import * as Flexmonster from "flexmonster/types/flexmonster";
-import { defineComponent } from 'vue';
+//Uncomment the lines below:
+// import {Pivot} from "vue-flexmonster";
+// import 'flexmonster/flexmonster.css';
+import Flexmonster from "flexmonster/types/flexmonster";
+import Vue from 'vue';
 
-export default defineComponent({
+export default Vue.extend({
   name: "PivotTableDemo",
   methods: {
     customizeToolbar(toolbar: Flexmonster.Toolbar) : void {
@@ -28,8 +30,9 @@ export default defineComponent({
     }
   },
   //2. Defining the component:
-  components: {
-     Pivot
-  }
+  //Uncomment the lines below:
+  // components: {
+  //    Pivot
+  // }
 });
 </script>

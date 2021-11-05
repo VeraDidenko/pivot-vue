@@ -36,16 +36,11 @@
 </template>
 
 <script>
-import ToggleSwitch from "../UIElements/ToggleSwitch";
+import ToggleSwitch from "@/components/UIElements/ToggleSwitch";
 
 export default {
   name: "UsingAPICalls",
   components: { ToggleSwitch },
-  data: function () {
-    return {
-      activeButton: "",
-    };
-  },
   methods: {
     customizeToolbar: function(toolbar) {
       toolbar.showShareReportTab = true;

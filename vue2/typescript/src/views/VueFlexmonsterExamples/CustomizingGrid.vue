@@ -32,15 +32,18 @@
   </div>
 </template>
 
-<script>
-import ToggleButton from "../UIElements/ToggleButton";
+<script lang="ts">
+import ToggleButton from "@/components/UIElements/ToggleButton.vue";
+import {Pivot} from "vue-flexmonster";
+import Flexmonster from "flexmonster/types/flexmonster";
+import Vue from "vue";
 
-export default {
+export default Vue.extend({
   name: "CustomizingGrid",
   components: { ToggleButton },
   methods: {
     onReady: function () {
-      this.$refs.pivot.flexmonster.setReport({
+      ((this.$refs.pivot as typeof Pivot).flexmonster as Flexmonster.Pivot).setReport({
         dataSource: {
           filename: "https://cdn.flexmonster.com/data/data.csv",
         },
@@ -75,29 +78,39 @@ export default {
         },
       });
     },
-    customizeToolbar: function (toolbar) {
+    customizeToolbar(toolbar: Flexmonster.Toolbar): void {
       toolbar.showShareReportTab = true;
     },
-    customizeCellFunction: function (cell, data) {
-      if (data.measure && data.measure.name == "Price") {
+    customizeCellFunction(
+      cell: Flexmonster.CellBuilder,
+      data: Flexmonster.CellData
+    ): void {
+      if (data.measure && data.measure.uniqueName == "Price") {
         let backgroundColor = "#00A45A";
         let textShadowColor = "#095231";
         let borderColor = "#009552";
-        cell.style["background-color"] = backgroundColor;
-        cell.style["color"] = "white";
-        cell.style["font-weight"] = "bold";
-        cell.style["text-shadow"] = `0px 2px 3px ${textShadowColor}`;
-        cell.style["border-bottom"] = `1px solid ${borderColor}`;
-        cell.style["border-right"] = `1px solid ${borderColor}`;
+        cell.style = {
+          ...cell.style,
+          "background-color": backgroundColor,
+          "color": "white",
+          "font-weight": "bold",
+          "text-shadow": `0px 2px 3px ${textShadowColor}`,
+          "border-bottom": `1px solid ${borderColor}`,
+          "border-right": `1px solid ${borderColor}`,
+        };
       }
     },
-    removeCustomization: function () {
-      this.$refs.pivot.flexmonster.customizeCell(null);
+    removeCustomization(): void {
+      (
+        (this.$refs.pivot as typeof Pivot).flexmonster as Flexmonster.Pivot
+      ).customizeCell(() => null);
     },
-    applyCustomization: function () {
-      this.$refs.pivot.flexmonster.customizeCell(this.customizeCellFunction);
+    applyCustomization(): void {
+      (
+        (this.$refs.pivot as typeof Pivot).flexmonster as Flexmonster.Pivot
+      ).customizeCell(this.customizeCellFunction);
     },
-    toggleCustomization: function ($event) {
+    toggleCustomization($event: boolean): void {
       if ($event) {
         this.removeCustomization();
       } else {
@@ -105,5 +118,5 @@ export default {
       }
     },
   },
-};
+});
 </script>

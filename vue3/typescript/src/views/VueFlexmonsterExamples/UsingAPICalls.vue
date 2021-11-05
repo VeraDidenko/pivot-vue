@@ -39,7 +39,7 @@
 
 <script lang="ts">
 import ToggleSwitch from "@/components/UIElements/ToggleSwitch.vue";
-import Pivot from "@/components/Pivot.vue";
+import Pivot from "vue-flexmonster/vue3";
 import * as Flexmonster from "flexmonster/types/flexmonster";
 import { defineComponent } from "vue";
 
