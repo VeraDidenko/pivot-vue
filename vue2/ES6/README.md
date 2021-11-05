@@ -21,7 +21,7 @@ To run a simple application with the Vue.js pivot table, you will need Node.js a
 1. Download the `.zip` archive with the sample project or clone it from GitHub with the following command:
 
 ```bash
-git clone https://github.com/flexmonster/pivot-vue.git && cd pivot-vue/vue2
+git clone https://github.com/flexmonster/pivot-vue.git && cd pivot-vue/vue2/ES6
 ```
 
 2. Install the npm packages described in `package.json`: 
